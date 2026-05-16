@@ -38,7 +38,7 @@ const LoginPage = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await axios.post("http://localhost:8080/api/login", formData);
+      const response = await axios.post("http://https://plantbackend-mqgt.onrender.com/api/login", formData);
       alert(response.data);
 
       // Extract role from response message

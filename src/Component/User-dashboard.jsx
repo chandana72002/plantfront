@@ -27,7 +27,7 @@ const UserDashboard = () => {
 
         // Fetch stats for the logged-in user
         const res = await axios.get(
-          `http://localhost:8080/api/user/all/stats`
+          `http://https://plantbackend-mqgt.onrender.com/api/user/all/stats`
         );
 
         setData({

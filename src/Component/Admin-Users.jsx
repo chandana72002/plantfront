@@ -16,7 +16,7 @@ const AdminUsers = () => {
   // Fetch all users
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:8080/api/admin/users");
+      const res = await axios.get("http://https://plantbackend-mqgt.onrender.com/api/admin/users");
       setUsers(res.data);
       setLoading(false);
     } catch (err) {
@@ -34,7 +34,7 @@ const AdminUsers = () => {
     if (!window.confirm("Are you sure you want to delete this user?")) return;
 
     try {
-      await axios.delete(`http://localhost:8080/api/admin/users/${id}`);
+      await axios.delete(`http://https://plantbackend-mqgt.onrender.com/api/admin/users/${id}`);
       setUsers(users.filter(user => user.id !== id));
     } catch (err) {
       alert("Failed to delete user.");
@@ -45,7 +45,7 @@ const AdminUsers = () => {
   const handleAddUser = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8080/api/admin/users", newUser);
+      const res = await axios.post("http://https://plantbackend-mqgt.onrender.com/api/admin/users", newUser);
       setUsers([...users, res.data]);
       setNewUser({ username: "", email: "", role: "USER" });
     } catch (err) {

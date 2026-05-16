@@ -18,7 +18,7 @@ const UserReminders = () => {
 
         // ✅ Fetch reminders for this user
         const res = await axios.get(
-          `http://localhost:8080/api/user/reminders`
+          `http://https://plantbackend-mqgt.onrender.com/api/user/reminders`
         );
         setReminders(res.data);
       } catch (err) {

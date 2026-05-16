@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Base URL of your Spring Boot backend
 const API = axios.create({
-  baseURL: "http://localhost:8080/api", // change if deployed
+  baseURL: "http://https://plantbackend-mqgt.onrender.com/api", // change if deployed
   headers: {
     "Content-Type": "application/json",
   },
