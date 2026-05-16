@@ -10,7 +10,7 @@ const UserPlants = () => {
   useEffect(() => {
     const fetchPlants = async () => {
       try {
-        const res = await axios.get("http://https://plantbackend-mqgt.onrender.com/api/user/plants");
+        const res = await axios.get("https://plantbackend-mqgt.onrender.com/api/user/plants");
         setPlants(res.data);
       } catch (err) {
         console.error("Error fetching plants:", err);
@@ -26,7 +26,7 @@ const UserPlants = () => {
   const toggleBought = async (plantId, currentStatus) => {
     try {
       await axios.put(
-        `http://https://plantbackend-mqgt.onrender.com/api/user/plants/${plantId}/bought`,
+        `https://plantbackend-mqgt.onrender.com/api/user/plants/${plantId}/bought`,
         { bought: !currentStatus }
       );
 

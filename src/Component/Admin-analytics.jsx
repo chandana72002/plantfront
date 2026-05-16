@@ -38,8 +38,8 @@ const AdminAnalytics = () => {
     const fetchAnalytics = async () => {
       try {
         const [statsRes, trendsRes] = await Promise.all([
-          axios.get("http://https://plantbackend-mqgt.onrender.com/api/admin/stats"),
-          axios.get("http://https://plantbackend-mqgt.onrender.com/api/admin/trends"),
+          axios.get("https://plantbackend-mqgt.onrender.com/api/admin/stats"),
+          axios.get("https://plantbackend-mqgt.onrender.com/api/admin/trends"),
         ]);
         setStats(statsRes.data);
         setTrendData(trendsRes.data);

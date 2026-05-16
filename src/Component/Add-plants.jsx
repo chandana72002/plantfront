@@ -34,7 +34,7 @@ const AddPlant = ({ onPlantAdded }) => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://https://plantbackend-mqgt.onrender.com/api/admin/plants", plant);
+      const res = await axios.post("https://plantbackend-mqgt.onrender.com/api/admin/plants", plant);
       alert(`Plant "${res.data.name}" added successfully!`);
       setPlant({
         name: "",

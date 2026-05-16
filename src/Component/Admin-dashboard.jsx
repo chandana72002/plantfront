@@ -21,7 +21,7 @@ const AdminDashboard = () => {
     const fetchData = async () => {
       try {
         // Fetch stats from /admin/stats
-        const statsRes = await axios.get("http://https://plantbackend-mqgt.onrender.com/api/admin/stats");
+        const statsRes = await axios.get("https://plantbackend-mqgt.onrender.com/api/admin/stats");
 
         setData({
           totalUsers: statsRes.data.totalUsers,

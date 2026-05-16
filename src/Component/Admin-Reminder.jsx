@@ -18,7 +18,7 @@ const AdminReminders = () => {
 
   const fetchReminders = async () => {
     try {
-      const res = await axios.get("http://https://plantbackend-mqgt.onrender.com/api/admin/reminders");
+      const res = await axios.get("https://plantbackend-mqgt.onrender.com/api/admin/reminders");
       setReminders(res.data);
     } catch (err) {
       console.error("Error fetching reminders", err);
@@ -35,7 +35,7 @@ const AdminReminders = () => {
 
   const handleAddReminder = async () => {
     try {
-      await axios.post("http://https://plantbackend-mqgt.onrender.com/api/admin/reminders", newReminder);
+      await axios.post("https://plantbackend-mqgt.onrender.com/api/admin/reminders", newReminder);
       setNewReminder({
         plantId: "",
         userId: "",
@@ -51,7 +51,7 @@ const AdminReminders = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://https://plantbackend-mqgt.onrender.com/api/admin/reminders/${id}`);
+      await axios.delete(`https://plantbackend-mqgt.onrender.com/api/admin/reminders/${id}`);
       fetchReminders();
     } catch (err) {
       console.error("Error deleting reminder", err);
