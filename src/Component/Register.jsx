@@ -41,7 +41,7 @@ const RegisterPage = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await axios.post("http://https://plantbackend-mqgt.onrender.com/api/register", formData);
+      const response = await axios.post("https://plantbackend-mqgt.onrender.com/api/register", formData);
       alert(response.data);
       navigate("/login"); // redirect to login page
     } catch (error) {
